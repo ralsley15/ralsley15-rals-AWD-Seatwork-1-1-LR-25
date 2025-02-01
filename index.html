@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation System - Main</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+ <!-- Header Section: Displays the title of the bus reservation system -->
+    <header>
+        <h1>Bus Reservation System</h1>
+    </header>
+        <main>
+<!-- Selection Section: Choose date and location for the bus reservation -->
+        <div class="options">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="location">Location:</label>
+            <select id="location" name="location">
+                <option value="manila">Manila</option>
+                <option value="quezon">Quezon City</option>
+                <option value="makati">Makati</option>
+            </select>
+        </div>
+ <!-- Bus Display Section: Show available buses -->
+        <div class="bus-container">
+            <div class="bus" id="bus1">
+                <h2>Bus 1</h2>
+            </div>
+            <div class="bus" id="bus2">
+                <h2>Bus 2</h2>
+            </div>
+            <div class="bus" id="bus3">
+                <h2>Bus 3</h2>
+            </div>
+        </div>
+<!-- Buttons Section: Reserve or reset selection -->
+        <div class="buttons">
+            <button id="reserveButton">Reserve</button>
+            <button id="resetButton">Reset</button>
+        </div>
+ <!-- Message Section: Displays reservation status -->
+        <p id="message"></p>
+    </main>
+ <!-- JavaScript: Link to the external JS file for functionality -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

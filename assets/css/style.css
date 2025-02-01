@@ -1,0 +1,241 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #97D5E0, #ADDFDE), url('8ac292568b888b81018bf0d2324b0270.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Animations */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay for better contrast */
+    z-index: 1;
+    animation: moveBackground 15s linear infinite;
+}
+
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 48px;
+    background-color: #0C4C8A; /* Lapis Blue */
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 40px; /* More rounded */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow for a modern feel */
+    letter-spacing: 1px;
+    animation: popIn 1s ease-out;
+    color: #fff;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 30px;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: rgba(31, 55, 93, 0.85); /* Blue Pansy */
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(10px); /* Soft background blur for modern look */
+}
+
+/* Adjust the input and select elements to be responsive */
+.options input[type="date"],
+.options select {
+    padding: 14px 24px;
+    border: 2px solid #97D5E0; /* Island Paradise */
+    border-radius: 12px; /* Slightly more rounded */
+    font-size: 16px;
+    width: 100%;
+    max-width: 280px; /* Increased width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.options input[type="date"]:focus,
+.options select:focus {
+    border-color: #0C4C8A; /* Lapis Blue */
+    box-shadow: 0 0 12px rgba(12, 76, 138, 0.4);
+}
+
+/* Ensure labels are centered above the inputs */
+.options label {
+    font-weight: 600;
+    color: #ADDFDE; /* Light blue color */
+    font-size: 18px;
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#reserveButton,
+#resetButton {
+    background-color: #97D5E0; /* Island Paradise */
+    color: #1F375D; /* Blue Pansy */
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 40px; /* Rounded corners for modern look */
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#reserveButton:hover,
+#resetButton:hover {
+    background-color: #0C4C8A; /* Lapis Blue */
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#reserveButton:active,
+#resetButton:active {
+    transform: translateY(0);
+}
+
+/* Message Styles */
+#message {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    max-width: 600px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* Bus Styles */
+.bus-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    margin: 20px auto;
+}
+
+.bus {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bus:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Seat Styles */
+.seat {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.seat:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+}
+
+.seat.selected {
+    background-color: #0C4C8A; /* Lapis Blue */
+    color: white;
+    border: 2px solid #388E3C;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+    padding: 15px 0;
+}

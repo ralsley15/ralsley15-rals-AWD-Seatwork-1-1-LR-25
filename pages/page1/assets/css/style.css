@@ -1,0 +1,15 @@
+/* Header Styles */
+header {
+    background-color: #2e3b4e; /* Dark blue background for the header */
+    padding: 20px 0; /* Adds padding to the top and bottom of the header */
+    text-align: center; /* Centers the content  horizontally */
+}
+
+h1 {
+    font-size: 48px; /* Large font size for the header title */
+    color: white; /* White text color for better contrast */
+    font-weight: 700; /* Makes the font bold */
+    letter-spacing: 2px; /* Adds spacing between the letters for better readability */
+    text-transform: uppercase; /* Transforms the text to uppercase for emphasis */
+    font-family: 'Roboto', sans-serif; /* Uses the 'Roboto' font for modern */
+}
