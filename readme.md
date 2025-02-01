@@ -18,7 +18,4 @@ HTML: The backbone of the website, used for creating the structure of the reserv
 CSS: For styling the website. It is used to create a visually appealing layout with animations (background movement, hover effects on buttons, and seat selections).
 JavaScript: For handling the dynamic functionality of the website.
 
-Key Components
-MultiPage Website
-Parallax transition
-Transactional
+
